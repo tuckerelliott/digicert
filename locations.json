@@ -1,0 +1,38 @@
+{
+    "total": 5,
+    "offset": 0,
+    "limit": 5,
+    "data": [
+        {
+            "name": "US Synthetic Headquarters",
+            "address": "1260 1600 W, Orem, UT 84058",
+            "lat": "40.27347",
+            "lng": "-111.73542"
+        },
+        {
+            "name": "Chemical Technologies Canada Headquarters",
+            "address": "6040 46 St SE, Calgary, AB T2C 4P9, Canada",
+            "lat": "51.00127",
+            "lng": "-113.96694"
+        },
+        {
+            "name": "Chemical Technologies Sugar Land Plant",
+            "address": "7701 Hwy 90A Sugar Land, TX 77478",
+            "lat": "29.61893",
+            "lng": "-95.64184"
+        },
+        {
+            "name": "Chemical Technologies Laboratory California",
+            "address": "6321 District Blvd Bakersfield, CA 93313",
+            "lat": "35.31261",
+            "lng": "-119.07407"
+        },
+        {
+            "name": "Chemical Technologies Laboratory",
+            "address": "356 Boak Avenue Hughesville, PA 17737",
+            "lat": "41.22726",
+            "lng": "-76.7297"
+        }
+    ],
+    ":type": "sheet"
+}

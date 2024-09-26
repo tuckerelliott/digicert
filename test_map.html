@@ -1,0 +1,186 @@
+
+<html>
+  <head>
+  
+
+
+
+
+
+
+
+    <head>
+      <title>ChampionX Locations</title>
+    
+      <meta name="description" content="Use this template repository as the starting point for new AEM projects.">
+      <meta property="og:title" content="ChampionX Locations">
+      <meta property="og:description" content="Use this template repository as the starting point for new AEM projects.">
+      <meta property="og:url" content="https://main--championx--tuckerelliott.hlx.page/">
+      <meta property="og:image" content="https://main--championx--tuckerelliott.hlx.page/media_1383dc9d669742505f136f4dea68d28a6287c1efd.png?width=1200&amp;format=pjpg&amp;optimize=medium">
+      <meta property="og:image:secure_url" content="https://main--championx--tuckerelliott.hlx.page/media_1383dc9d669742505f136f4dea68d28a6287c1efd.png?width=1200&amp;format=pjpg&amp;optimize=medium">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="Home | AEM Boilerplate">
+      <meta name="twitter:description" content="Use this template repository as the starting point for new AEM projects.">
+      <meta name="twitter:image" content="https://main--championx--tuckerelliott.hlx.page/media_1383dc9d669742505f136f4dea68d28a6287c1efd.png?width=1200&amp;format=pjpg&amp;optimize=medium">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script src="/scripts/aem.js" type="module"></script>
+      <script src="/scripts/scripts.js" type="module"></script>
+      <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/fonts.css"><link rel="stylesheet" href="/blocks/columns/columns.css"><link rel="stylesheet" href="/blocks/cards/cards.css"><link rel="stylesheet" href="/blocks/header/header.css"><link rel="stylesheet" href="/blocks/footer/footer.css"><link rel="stylesheet" href="/styles/lazy-styles.css"></head>
+
+
+
+
+
+
+
+
+
+
+    <style type="text/css">
+      html {
+        height: 100%
+      }
+
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: verdana, arial;
+      }
+
+      #map_canvas {
+        height: 100%;
+        max-height: 600px;
+
+        width: 100%;
+
+        border: 5px solid #eee;
+      }
+
+      .wrap {
+        padding: 25px 0;
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+
+  <body>
+
+
+
+
+
+
+
+
+
+    <header class="header-wrapper"><div class="header block" data-block-name="header" data-block-status="loaded"><div><div></div></div><div class="nav-wrapper"><nav id="nav" aria-expanded="true"><div class="nav-hamburger"><button type="button" aria-controls="nav" aria-label="Close navigation">
+      <span class="nav-hamburger-icon"></span>
+    </button></div><div class="section nav-brand" data-section-status="loaded" style="">
+  
+<div class="default-content-wrapper"><picture>
+    <source type="image/webp" srcset="https://main--championx--tuckerelliott.hlx.page/media_1894c0f45444f35b3fde6112edde1fb62fc29b233.png?width=2000&amp;format=webply&amp;optimize=medium" media="(min-width: 600px)">
+    <source type="image/webp" srcset="https://main--championx--tuckerelliott.hlx.page/media_1894c0f45444f35b3fde6112edde1fb62fc29b233.png?width=750&amp;format=webply&amp;optimize=medium">
+    <source type="image/png" srcset="https://main--championx--tuckerelliott.hlx.page/media_1894c0f45444f35b3fde6112edde1fb62fc29b233.png?width=2000&amp;format=png&amp;optimize=medium" media="(min-width: 600px)">
+    <img loading="lazy" alt="" src="https://main--championx--tuckerelliott.hlx.page/media_1894c0f45444f35b3fde6112edde1fb62fc29b233.png?width=750&amp;format=png&amp;optimize=medium" width="544" height="91">
+  </picture></div></div><div class="section nav-sections" data-section-status="loaded" style="">
+  
+<div class="default-content-wrapper"><ul>
+    <li aria-expanded="false"><a href="https://main--championx--tuckerelliott.hlx.page/">Products & Solutions</a></li>
+    <li aria-expanded="false">Safety & Sustainability</li>
+    <li aria-expanded="false">Who We Are</li>
+    <li aria-expanded="false">Resources</li>
+  </ul></div></div><div class="section nav-tools" data-section-status="loaded" style="">
+  
+<div class="default-content-wrapper"><p><span class="icon icon-search"><img data-icon-name="search" src="/icons/search.svg" alt="" loading="lazy"></span></p></div></div></nav></div></div></header>
+
+
+
+
+<h1 class="heading  center" style="text-align: center">Locations</h1>
+
+<div class="richtext    ">
+<p style="text-align: center;">Our presence in over 60 countries allows us to be everywhere our customers need us, delivering market-shaping solutions through an unmatched global supply chain. See where we are or <a href="contact-us/">contact us</a>.</p>
+<p style="text-align: center;">&nbsp;</p>
+</div>
+
+
+
+
+
+    <div class="wrap">
+
+      <div id="map_canvas"></div>
+
+    </div>
+    <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyDXzFn5v3nI8tvmgI9lDk17bVYszO0ThsI"></script>
+
+    <script type="text/javascript">
+      function initialize() {
+
+        // Setup map and options
+        const map = new google.maps.Map(document.getElementById("map_canvas"), {
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
+
+        let bounds = new google.maps.LatLngBounds();
+
+
+        fetch('locations.json')
+                .then(response => response.json())
+                .then(data => {
+                  // Loop through the data
+                  if (Array.isArray(data.data)) {
+                    data.data.forEach(item => {
+
+                      const myLatlng = new google.maps.LatLng(item.lat, item.lng); // set position
+
+                      // Add marker to map
+                      const marker = new google.maps.Marker({
+                        position: myLatlng,
+                        map: map,
+                      });
+
+                      bounds.extend(marker.position); // extend bounds with marker
+
+                      // Set info window content
+                      let infoContent = '<strong>' + item.name + '</strong>';
+                      infoContent += '<p>' + item.address + '</p>';
+
+                      // Add info window
+                      marker.info = new google.maps.InfoWindow({
+                        content: infoContent
+                      });
+
+                      // Add listener for info window
+                      google.maps.event.addListener(marker, 'click', function () {
+                        marker.info.open(map, marker);
+                      });
+
+                      // Add marker location to loc var
+                      const loc = new google.maps.LatLng(marker.position.lat(), marker.position.lng());
+
+                      // extend bounds with loc
+                      bounds.extend(loc);
+                    });
+                    map.fitBounds(bounds);
+                    map.panToBounds(bounds);
+                  } else {
+                    console.error('Error: data is not an array');
+                  }
+                })
+                .catch(error => console.error('Error:', error));
+      }
+    </script>
+
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function() {
+        initialize(); // init map
+      });
+    </script>
+
+  </body>
+</html>
