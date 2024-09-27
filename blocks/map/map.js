@@ -1,4 +1,4 @@
-import * as maps from "https://maps.google.com/maps/api/js?key=AIzaSyDXzFn5v3nI8tvmgI9lDk17bVYszO0ThsI";
+import maps from "https://maps.google.com/maps/api/js?key=AIzaSyDXzFn5v3nI8tvmgI9lDk17bVYszO0ThsI";
 
 function initialize() {
   // Setup map and options
@@ -56,8 +56,4 @@ function initialize() {
     .catch((error) => console.error("Error:", error));
 }
 
-export default async function decorate(block) {
-  const data = await fetchCarouselData(block);
-  const groupedData = groupDataByTitle(data);
-  renderData(groupedData, block);
-}
+export default async function decorate(block) {}
