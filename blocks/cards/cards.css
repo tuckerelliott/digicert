@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(278px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 16px;
 }
 
@@ -25,7 +25,32 @@
 }
 
 .cards > ul > li img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
   object-fit: cover;
+}
+
+.cards p.button-container {
+  text-align: center;
+}
+
+.cards a:any-link {
+  font-family: var(--body-font-family);
+  display: inline-block;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: 2px solid;
+  padding: 15px 50px;
+  line-height: 1;
+  text-align: center;
+  font-style: normal;
+  font-weight: 600;
+  cursor: pointer;
+  color: #0f9dff;
+  background-color: #fff;
+  margin: 16px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 30px;
+  font-size: 16px;
+  text-transform: uppercase;
 }

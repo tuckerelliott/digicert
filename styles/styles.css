@@ -12,7 +12,7 @@
 
 :root {
   /* colors */
-  --link-color: #035fe6;
+  --link-color: #0174c3;
   --link-hover-color: #136ff6;
   --background-color: white;
   --light-color: #eee;
@@ -20,12 +20,12 @@
   --text-color: black;
 
   /* fonts */
-  --body-font-family: roboto, roboto-fallback;
-  --heading-font-family: var(--body-font-family);
+  --body-font-family: roboto-light, roboto-fallback;
+  --heading-font-family: roboto-condensed;
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
 
   /* body sizes */
-  --body-font-size-m: 22px;
+  --body-font-size-m: 20px;
   --body-font-size-s: 18px;
   --body-font-size-xs: 16px;
 
@@ -50,12 +50,12 @@
 
 @media (width >= 900px) {
   :root {
-    --heading-font-size-xxl: 60px;
-    --heading-font-size-xl: 48px;
+    --heading-font-size-xxl: 64px;
+    --heading-font-size-xl: 40px;
     --heading-font-size-l: 36px;
-    --heading-font-size-m: 30px;
+    --heading-font-size-m: 24px;
     --heading-font-size-s: 24px;
-    --heading-font-size-xs: 22px;
+    --heading-font-size-xs: 16px;
   }
 }
 
@@ -63,9 +63,14 @@ body {
   font-size: var(--body-font-size-m);
   margin: 0;
   font-family: var(--body-font-family);
-  line-height: 1.6;
+  line-height: 28px;
   color: var(--text-color);
   background-color: var(--background-color);
+}
+
+body.dark {
+  color: #FFF;
+  background-color: #001524;
 }
 
 body.appear {
@@ -83,11 +88,19 @@ h4,
 h5,
 h6 {
   font-family: var(--heading-font-family);
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.25;
   margin-top: 1em;
   margin-bottom: 0.5em;
   scroll-margin: calc(var(--nav-height) + 1em);
+}
+
+h4 {
+  font-family: roboto-light;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 1px solid #abb6bf;
+  padding-bottom: 20px;
 }
 
 h1 { font-size: var(--heading-font-size-xxl); }
@@ -140,7 +153,7 @@ a:hover {
   color: var(--link-hover-color);
 }
 
-/* buttons */
+/* buttons 
 a.button:any-link,
 button {
   font-family: var(--body-font-family);
@@ -161,6 +174,7 @@ button {
   text-overflow: ellipsis;
   border-radius: 30px;
 }
+*/
 
 a.button:hover,
 a.button:focus,
