@@ -31,3 +31,8 @@
     order: unset;
   }
 }
+
+body.dark > .columns-4-cols > a:anylink {
+  color: #FFF;
+}
+
