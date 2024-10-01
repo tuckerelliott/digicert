@@ -1,6 +1,6 @@
 {
   "mappings": [
-    "/content/digicert/:/",
-    "/content/digicert/configuration:/.helix/config.json"
+    "/content/d/:/",
+    "/content/d/configuration:/.helix/config.json"
   ]
 }
