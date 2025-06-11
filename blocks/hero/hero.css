@@ -11,25 +11,26 @@ main .hero-container {
 .hero {
   position: relative;
   padding: 32px;
-  min-height: 300px;
+  min-height: 615px;
 }
 
 .hero h1 {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  color: rgb(1, 116, 195);
-  line-height: .25px;
+  color: #FFF;
 }
 
 .hero h4 {
   border-bottom: none;
+  color: #FFF;
+  max-width: 400px;
 }
 
 .hero picture {
   position: absolute;
   z-index: -1;
-  inset: 0;
+  /* inset: 0; */
   object-fit: cover;
   box-sizing: border-box;
 }
@@ -41,7 +42,7 @@ main .hero-container {
 }
 
 main .hero-container > div > div > div:nth-child(2) > div {
-  padding: 32px;
+  padding: 64px;
 }
 
 .hero.light {
@@ -50,4 +51,26 @@ main .hero-container > div > div > div:nth-child(2) > div {
 
 .hero.light h1 {
   color: #FFF;
+}
+
+.hero a:any-link {
+  font-family: var(--body-font-family);
+  display: inline-block;
+  box-sizing: border-box;
+  text-decoration: none;
+  padding: 15px 50px;
+  line-height: 1;
+  text-align: center;
+  font-style: normal;
+  font-weight: 600;
+  cursor: pointer;
+  color: #FFF;
+  background-color: #0f9dff;
+  margin: 16px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 30px;
+  font-size: 16px;
+  text-transform: uppercase;
 }

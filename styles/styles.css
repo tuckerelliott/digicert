@@ -96,10 +96,10 @@ h6 {
 }
 
 h4 {
-  font-family: roboto-light;
+  font-family: roboto-condensed;
   font-weight: bold;
   text-decoration: none;
-  border-bottom: 1px solid #abb6bf;
+  color: #083D77;
   padding-bottom: 20px;
 }
 
@@ -144,7 +144,7 @@ main pre {
 
 /* links */
 a:any-link {
-  color: var(--link-color);
+  color: #000;
   text-decoration: none;
 }
 
@@ -235,7 +235,12 @@ main .section {
 /* section metadata */
 main .section.light,
 main .section.highlight {
-  background-color: var(--light-color);
+  background-color: #E9EEF1;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 30px;
+  padding: 32px 32px;
 }
 
 ol {
